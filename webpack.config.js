@@ -66,7 +66,7 @@ const productionConfig = merge([
     },
   ]),
   parts.extractCSS({
-    use: ['css-loader', parts.autoprefix()],
+    use: ['css-loader', parts.autoprefix(), 'sass-loader'],
   }),
   parts.setFreeVariable(
     'process.env.NODE_ENV',

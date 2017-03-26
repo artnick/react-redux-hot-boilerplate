@@ -54,11 +54,11 @@ exports.loadCSS = function({ include, exclude } = {}) {
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.sass$/,
           include,
           exclude,
 
-          use: ['style-loader', 'css-loader'],
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
       ],
     },
@@ -75,7 +75,7 @@ exports.extractCSS = function({ include, exclude, use }) {
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.sass$/,
           include,
           exclude,
 
